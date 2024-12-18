@@ -1,0 +1,96 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .landing-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: url("https://t3.ftcdn.net/jpg/01/77/14/32/360_F_177143288_8yenhiFQr1zX6gi8QDK6zeaLztDgxtuw.jpg") no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  /* Content Section */
+  .content-section {
+    background-color: #f0f8ff;
+    padding: 2rem;
+  }
+  
+  .image-text-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .content-image {
+    width: 40%;
+    margin-right: 1.5rem;
+  }
+  
+  .content-text {
+    flex: 1;
+    font-size: 1rem;
+  }
+  
+  .link-title {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .link-title:hover {
+    text-decoration: underline;
+  }
+  
+  /* Destination Section */
+  .destination-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    background-color: #fff;
+  }
+  
+  .destination-card {
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  .card-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .destination-card h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
