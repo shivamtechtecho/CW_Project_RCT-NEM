@@ -107,7 +107,7 @@ export const Hotels = () => {
 
       {hotels.map((hotel, index) => (
         <Card
-          bg={theme === "dark" ? "yellow" : "gray"}
+          bg={theme === "dark" ? "dimgray" : "antiquewhite"}
           key={index}
           direction={{ base: "column", sm: "row" }}
           overflow="hidden"
