@@ -10,7 +10,7 @@ export const ThemedContent = () => {
     return (  
       <div className={theme}>  
         
-        <Hotels />  
+        <Hotels/>  
       </div>  
     );  
   };  
