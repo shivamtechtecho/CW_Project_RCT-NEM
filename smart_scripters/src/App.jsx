@@ -1,14 +1,15 @@
-import './App.css'
-import { Hotels } from './components/Hotels'
+import { ThemeProvider } from './context/themeContext'; // Adjust the path as necessary  
+import './App.css';
+import { ThemedContent } from './components/themeContent';
 
-function App() {
-  // const [count, setCount] = useState(0)
+function App() {  
+  return (  
+    <ThemeProvider>  
+      <ThemedContent />  
+    </ThemeProvider>  
+  );  
+}  
 
-  return (
-    <>
-      <Hotels/>
-    </>
-  )
-}
 
-export default App
+
+export default App;
