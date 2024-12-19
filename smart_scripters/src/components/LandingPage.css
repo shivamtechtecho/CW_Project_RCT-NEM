@@ -13,17 +13,22 @@
   
   /* Hero Section */
   .hero-section {
-    background: url("https://t3.ftcdn.net/jpg/01/77/14/32/360_F_177143288_8yenhiFQr1zX6gi8QDK6zeaLztDgxtuw.jpg") no-repeat center center/cover;
-    height: 400px;
+    background: url("https://images.pexels.com/photos/4448861/pexels-photo-4448861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 
+                no-repeat center center/cover;
+    height: 750px;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed; 
   }
   
+  
   .main-title {
+
+    font-family: serif;
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -31,19 +36,24 @@
   }
   
   .subtitle {
+    font-family: cursive;
     font-size: 1.5rem;
     margin-top: 10px;
   }
   
   /* Content Section */
   .content-section {
-    background-color: #f0f8ff;
-    padding: 2rem;
+    background: url("http://www.wirralart.com/wp-content/uploads/2018/06/Gradient-Colour-Art.jpg") 
+    no-repeat center center/cover;
+    background-color: #8ab4da;
+    padding: 4rem;
+    
   }
   
   .image-text-container {
+    background-color: rgb(102, 129, 152);
     display: flex;
-    align-items: flex-start;
+    align-items:normal;
   }
   
   .content-image {
@@ -53,11 +63,11 @@
   
   .content-text {
     flex: 1;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   
   .link-title {
-    color: #1e90ff;
+    color: #0456a7;
     text-decoration: none;
     font-weight: bold;
   }
@@ -72,8 +82,12 @@
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 2rem 0;
-    background-color: #fff;
+    padding: 2rem;
+    background: url("https://images.pexels.com/photos/3737179/pexels-photo-3737179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center/cover;
+    color: #fff; /* Ensures text is visible on the background */
+    position: relative; /* Required for layering */
   }
+  
   
   .destination-card {
     text-align: center;
@@ -81,8 +95,8 @@
   }
   
   .card-image {
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -92,5 +106,19 @@
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
+  }
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 300px;
+      background-size: cover;
+    }
+  
+    .main-title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
   }
   
