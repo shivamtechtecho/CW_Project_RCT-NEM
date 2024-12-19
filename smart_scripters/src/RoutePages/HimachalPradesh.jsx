@@ -1,6 +1,12 @@
+import Footer from "../components/Footer"
+import { Navbar } from "../components/Navbar"
 
 export const HimachalPradesh = () =>{
     return(
-        <h1>himachal</h1>
+        <div>
+        <Navbar/>
+        <h1>Himachal Pradesh</h1>
+        <Footer/>
+        </div>
     )
 }
