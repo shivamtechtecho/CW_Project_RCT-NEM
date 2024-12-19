@@ -1,6 +1,12 @@
+import Footer from "../components/Footer"
+import { Navbar } from "../components/Navbar"
 
 export const JammuKashmir = ()=>{
     return(
-        <h1>Jammu & Kashmir</h1>
+        <div>
+        <Navbar/>
+        <h1>Jammu Kashmir</h1>
+        <Footer/>
+        </div>
     )
 }

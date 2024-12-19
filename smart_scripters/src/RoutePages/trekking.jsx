@@ -1,6 +1,12 @@
+import Footer from "../components/Footer"
+import { Navbar } from "../components/Navbar"
 
 export const Trekking =()=>{
     return (
-        <h1>trekking</h1>
+        <div>
+        <Navbar/>
+        <h1>Trekking</h1>
+        <Footer/>
+        </div>
     )
 }

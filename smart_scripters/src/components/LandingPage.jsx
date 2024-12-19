@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./LandingPage.css";
+import { Navbar } from "./Navbar";
+import Footer from "./Footer";
+import { ThemeContext } from "../context/themeContext";
 
 export const LandingPage = () => {
+
+  let {theme,toggleTheme} = useContext(ThemeContext)
+  // console.log("i am working" ,theme);
+  
+
   return (
+    <>
+    <Navbar/>
     <div className="landing-page">
       {/* Hero Section */}
-      <div className="hero-section">
+      <div className="hero-section" style={{color:theme==="dark"?"darkgreen":"darkblue"}}>
         <h1 className="main-title">THE HIMALAYAN RAMBLE</h1>
         <p className="subtitle">
           Stay and Travel to the only place that is heaven in this world
@@ -13,7 +23,7 @@ export const LandingPage = () => {
       </div>
 
       {/* Content Section */}
-      <div className="content-section">
+      <div className="content-section" style={{backgroundColor:theme==="dark"?"black":"white",color:theme==="dark"?"white":"black"}}>
         <div className="image-text-container">
           <img
             src="https://media.istockphoto.com/id/1682183202/photo/parvati-valley-and-himalaya-mountains-india.jpg?s=1024x1024&w=is&k=20&c=LhwnySmO_ltZ8WBL8NgV7XX71bmXbXHnB8INQlJUSnk="
@@ -44,14 +54,14 @@ export const LandingPage = () => {
       </div>
 
       {/* Destination Cards */}
-      <div className="destination-section">
-        <div className="destination-card">
+      <div className="destination-section" style={{backgroundColor:theme==="dark"?"black":"white",color:theme==="dark"?"darkred":"black"}}>
+        <div className="destination-card" >
           <img
             src="https://media.istockphoto.com/id/1318300669/photo/latest-views-of-snowfall-in-shimla.jpg?s=612x612&w=0&k=20&c=wZmPelTzmwwhIPuC0qtVn4BW1lVUQXAeY2Cqx4cdcwc="
             alt="Shimla"
             className="card-image"
           />
-          <h3>SHIMLA</h3>
+          <h3 style={{color:theme==="dark"?"darkred":"black"}}>SHIMLA</h3>
         </div>
         <div className="destination-card">
           <img
@@ -59,7 +69,7 @@ export const LandingPage = () => {
             alt="Lahaul"
             className="card-image"
           />
-          <h3>LAHOUL</h3>
+          <h3 style={{color:theme==="dark"?"darkred":"black"}}>LAHOUL</h3>
         </div>
         <div className="destination-card">
           <img
@@ -67,7 +77,7 @@ export const LandingPage = () => {
             alt="Spiti"
             className="card-image"
           />
-          <h3>SPITI</h3>
+          <h3 style={{color:theme==="dark"?"darkred":"black"}}>SPITI</h3>
         </div>
         <div className="destination-card">
           <img
@@ -75,10 +85,12 @@ export const LandingPage = () => {
             alt="Kullu Manali"
             className="card-image"
           />
-          <h3>KULLU MANALI</h3>
+          <h3 style={{color:theme==="dark"?"darkred":"black"}}>KULLU MANALI</h3>
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

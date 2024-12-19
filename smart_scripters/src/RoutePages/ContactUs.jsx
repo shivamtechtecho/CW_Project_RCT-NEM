@@ -1,6 +1,12 @@
+import Footer from "../components/Footer"
+import { Navbar } from "../components/Navbar"
 
 export const ContactUs = () =>{
     return(
-        <h1>Contact Page</h1>
+        <div>
+        <Navbar/>
+        <h1>Contact</h1>
+        <Footer/>
+        </div>
     )
 }
