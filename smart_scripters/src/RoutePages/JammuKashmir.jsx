@@ -1,8 +1,11 @@
+import Footer from "../components/Footer"
+import { Navbar } from "../components/Navbar"
 
 import React from "react";
 
 export const JammuKashmir = () => {
     return(
+
         <div className="landing-page">
       <div className="hero-section">
         <h1 className="main-title">JAMMU & KASHMIR</h1>

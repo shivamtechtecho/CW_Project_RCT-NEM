@@ -1,6 +1,12 @@
+import Footer from "../components/Footer"
+import { Navbar } from "../components/Navbar"
 
 export const Advature = ()=>{
     return(
-        <h1>Adventure</h1>
+        <div>
+        <Navbar/>
+        <h1>Advanture</h1>
+        <Footer/>
+        </div>
     )
 }

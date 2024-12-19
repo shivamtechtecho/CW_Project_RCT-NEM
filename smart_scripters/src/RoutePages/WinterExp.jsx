@@ -1,5 +1,12 @@
+import Footer from "../components/Footer"
+import { Navbar } from "../components/Navbar"
+
 export const WinterExpedition =()=>{
     return(
-        <h1>Winter Exp</h1>
+        <div>
+        <Navbar/>
+        <h1>Winter Expedition</h1>
+        <Footer/>
+        </div>
     )
 }
