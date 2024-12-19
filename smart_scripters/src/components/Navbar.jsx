@@ -21,11 +21,11 @@ export const Navbar = () => {
   const { theme,toggleTheme } = useContext(ThemeContext);  
 
   return (  
-      <Box marginLeft={"20px"} marginRight={"20px"} marginbottom={"20px"} borderRadius={"50px"}  borderBottomWidth="1px" borderColor="gray.200" dark={{ bg: 'gray.900' }}>  
+      <Box position={'fixed'} width={"100%"} left={"0px"} top={"0px"} bg={theme=="dark"?"black":"gray"} zIndex={"1000"}  borderBottomWidth="1px" borderColor="gray.200" dark={{ bg: 'gray.900' }}>  
           <Flex  
               maxW="screen.xl"  
               mx="auto"  
-              p={4}  
+              p={0}  
               align="center"  
               justify="space-between"  
               wrap="wrap"  
@@ -38,18 +38,18 @@ export const Navbar = () => {
                   onClick={isOpen ? onClose : onOpen}  
                   display={{ md: 'none' }}  
               >  
-                  <HamburgerIcon boxSize={5} />  
+                  <HamburgerIcon boxSize={6} />  
               </Button>  
               <Flex  
                   display={{ base: isOpen ? 'flex' : 'none', md: 'flex' }}  
                   flexDirection={{ base: 'column', md: 'row' }}  
                   alignItems="center"  
                   mt={{ base: 4, md: 0 }}  
-                  borderColor="pink"  
+                  borderColor="black"  
                   borderWidth="1px"  
                   borderRadius="lg"  
-                  bg={{ base: 'gray.50', md: 'transparent' }}  
-                  p={4}  
+                  bg={{ base: 'midnightblue',  }}  
+                  p={2}  
                   gap={4}  
               >  
                   <Link to="/"><Button variant="link" colorScheme="blue" isActive>  
@@ -99,7 +99,7 @@ export const Navbar = () => {
                   <Button variant="link" colorScheme="gray">  
                       Contact  
                   </Button>   
-                  <Link to="/registration">SIGN-UP</Link>
+                  <Link to="/registration" style={{color:"white"}}>SIGN-UP</Link>
               </Flex>  
               <button onClick={toggleTheme}>💡⚫</button>  
           </Flex>  
