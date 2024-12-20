@@ -9,7 +9,7 @@ export const JammuKashmir = () => {
   const {theme, toggleTheme} = useContext(ThemeContext);
 
   return (
-    <div className="jammupage">
+    <div className="jammupage" style={{backgroundColor: theme=="dark"? "skyBlue" : "midnightBlue", color: theme==="dark"? "midnightblue" : "grey"}}>
         <Navbar/>
       <div className="title">
         <h1 className="title_2">JAMMU & KASHMIR</h1>

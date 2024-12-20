@@ -103,7 +103,15 @@
     position: relative; /* Required for layering */
   }
   
-  
+  .content_2{
+    text-align: center;
+    padding: 20%;
+    padding-top: 5%;
+    font-family: Lexend Arial;
+    font-weight: 400;
+    
+  }
+
   .destination-card {
     text-align: center;
     margin: 1rem;
@@ -123,12 +131,12 @@
     color: #333;
   }
   @media (max-width: 768px) {
-    .hero-section {
+    .title {
       height: 300px;
       background-size: cover;
     }
   
-    .main-title {
+    .title_2 {
       font-size: 2rem;
     }
   
