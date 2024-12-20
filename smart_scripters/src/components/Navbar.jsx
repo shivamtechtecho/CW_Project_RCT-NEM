@@ -106,9 +106,9 @@ export const Navbar = () => {
                       </MenuList>  
                   </Menu>  
 
-                  <Button variant="link" colorScheme="black">  
-                      Contact  
-                  </Button>   
+                  <Link to="/Contact"><Button variant="link" colorScheme="black">  
+                      Contact
+                  </Button></Link>  
                   <Link to="/registration" style={{color:"white"}}>SIGN-UP</Link>
               </Flex>  
               <button onClick={toggleTheme}>💡⚫</button>  
