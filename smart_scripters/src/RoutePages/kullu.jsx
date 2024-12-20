@@ -7,7 +7,20 @@ export const Kullu = () => {
   return (
     <div className="jammupage">
         <Navbar/>
-      <div className="title">
+      <div style = {{
+        background: url("https://im.hunt.in/cg/kullu/City-Guide/kull4.jpg"), 
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+          height: "750px",
+          color: "white",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundAttachment: "fixed" 
+      }}>
         <h1 className="title_2">KULLU</h1>
       </div>
 

@@ -1,9 +1,13 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import React from "react";
+import React, { useContext } from "react";
 import "./routepages.css"
+import { ThemeContext } from "../context/themeContext";
 
 export const JammuKashmir = () => {
+
+  const {theme, toggleTheme} = useContext(ThemeContext);
+
   return (
     <div className="jammupage">
         <Navbar/>
@@ -12,7 +16,7 @@ export const JammuKashmir = () => {
       </div>
 
       {/* Content Section */}
-      <div className="content">
+      <div className="content" style={{backgroundColor: theme=="dark"? "skyBlue" : "midnightBlue", color: theme==="dark"? "midnightblue" : "grey"}}>
         <div className="image">
          
           <div className="content_2">
