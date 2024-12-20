@@ -7,7 +7,7 @@ export const LahaulSpiti = () => {
   return (
     <div className="jammupage">
         <Navbar/>
-      <div style={{background: url("https://www.thethumpingnomad.com/wp-content/uploads/2022/12/5_Chandratal.jpg"), 
+      <div style={{background: "url(https://www.thethumpingnomad.com/wp-content/uploads/2022/12/5_Chandratal.jpg)", 
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
