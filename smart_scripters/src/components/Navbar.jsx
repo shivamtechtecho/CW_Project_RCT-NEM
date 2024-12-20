@@ -50,7 +50,7 @@ export const Navbar = () => {
                   borderRadius="lg"  
                   bg={{ base: 'transparent',  }}  
                   p={2}
-                  color={"white"}
+                  color={theme=="dark"?"white":"black"}
                   gap={16}  
               >  
                   <Link to="/"><Button variant="link" colorScheme="black" isActive>  
