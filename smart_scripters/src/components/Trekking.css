@@ -1,0 +1,98 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .landing-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: url("https://images.pexels.com/photos/4448861/pexels-photo-4448861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 
+                no-repeat center center/cover;
+    height: 780px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed; 
+  }
+  
+  
+  .main-title {
+    color: black;
+    font-family: serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .highlight-r {
+    color: rgb(255, 254, 254);
+  }
+
+  .subtitle {
+    color: black;
+    font-family: cursive;
+    font-size: 1.7rem;
+    margin-top: 10px;
+  }
+  
+  /* Content Section */
+  .content-section {
+    background: url("http://www.wirralart.com/wp-content/uploads/2018/06/Gradient-Colour-Art.jpg") 
+    no-repeat center center/cover;
+    background-color: #8ab4da;
+    padding: 4rem;
+    
+  }
+  
+  .image-text-container {
+    background-color: rgb(102, 129, 152);
+    display: flex;
+    align-items:normal;
+  }
+  
+  .content-image {
+    width: 40%;
+    margin-right: 1.5rem;
+  }
+  
+  .content-text {
+    flex: 1;
+    font-size: 1.2rem;
+  }
+  
+  .link-title {
+    color: #0456a7;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .link-title:hover {
+    text-decoration: underline;
+  }
+  
+  }
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 300px;
+      background-size: cover;
+    }
+  
+    .main-title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+  

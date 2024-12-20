@@ -16,7 +16,7 @@ export const LandingPage = () => {
     <div className="landing-page">
       {/* Hero Section */}
       <div className="hero-section" style={{color:theme==="dark"?"darkgreen":"darkblue"}}>
-        <h1 className="main-title">TREZENE</h1>
+        <h1 className="main-title"> T<span className="highlight-r">R</span>EZENE</h1>
         <p className="subtitle">
           Stay and Travel to the only place that is heaven in this world
         </p>
@@ -34,7 +34,7 @@ export const LandingPage = () => {
             <p>
               <a href="#" className="link-title">
                 <br />
-              Trezene: A Journey to Remember
+              <b>Trezene</b>: A Journey to Remember
               </a>{" "}
               Nestled in the heart of Himachal Pradesh, Trezene was born out of a passion for travel and a deep love for the majestic landscapes of the Himalayas. Since its inception, the company has been dedicated to providing travelers with unforgettable experiences that combine adventure, comfort, and cultural immersion.
 
@@ -63,7 +63,7 @@ At Trezene, travel isn’t just about reaching a destination; it’s about creat
             alt="Shimla"
             className="card-image"
           />
-          <h3 style={{color:theme==="dark"?"darkred":"black"}}>SHIMLA</h3>
+          <h3 className="card-text" style={{color:theme==="dark"?"darkred":"black"}}>SHIMLA</h3>
         </div>
         <div className="destination-card">
           <img
@@ -71,7 +71,7 @@ At Trezene, travel isn’t just about reaching a destination; it’s about creat
             alt="Lahaul"
             className="card-image"
           />
-          <h3 style={{color:theme==="dark"?"darkred":"black"}}>LAHOUL</h3>
+          <h3 className="card-text" style={{color:theme==="dark"?"darkred":"black"}} >LAHOUL</h3>
         </div>
         <div className="destination-card">
           <img
@@ -79,14 +79,16 @@ At Trezene, travel isn’t just about reaching a destination; it’s about creat
             alt="Kailash"
             className="card-image"
           />
-          <h3 style={{color:theme==="dark"?"darkred":"black"}}>KAILASH</h3>
+          <h3 className="card-text" style={{color:theme==="dark"?"darkred":"black"}}>KAILASH</h3>
         </div>
         <div className="destination-card">
+        <a href="https://example.com" target="_blank">
           <img
             src="https://media.istockphoto.com/id/1682328008/photo/mall-main-street-in-manali-india.jpg?s=1024x1024&w=is&k=20&c=FRJfejvHfdU6Q_sJuYFAVnH-K0xXYIy1pEu96F5XM9c="
             alt="Kullu Manali"
             className="card-image"
           />
+          </a>
           <h3 style={{color:theme==="dark"?"darkred":"black"}}>KULLU MANALI</h3>
         </div>
       </div>
