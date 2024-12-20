@@ -8,7 +8,7 @@ export const Kullu = () => {
     <div className="jammupage">
         <Navbar/>
       <div style = {{
-        background: url("https://im.hunt.in/cg/kullu/City-Guide/kull4.jpg"), 
+        background: "url(https://im.hunt.in/cg/kullu/City-Guide/kull4.jpg)", 
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',

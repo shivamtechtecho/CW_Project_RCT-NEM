@@ -7,7 +7,20 @@ export const Spiti = () => {
   return (
     <div className="jammupage">
         <Navbar/>
-      <div className="title">
+      <div style = {{
+        background: "url(https://dr7f10k1l6bnm.cloudfront.net/wp-content/uploads/2024/04/spiti-valley.jpg)", 
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+          height: "750px",
+          color: "white",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundAttachment: "fixed" 
+      }}>
         <h1 className="title_2">SPITI</h1>
       </div>
 

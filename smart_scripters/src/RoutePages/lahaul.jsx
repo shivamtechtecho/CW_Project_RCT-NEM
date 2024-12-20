@@ -8,7 +8,7 @@ export const Lahaul = () => {
     
     <div className="jammupage">
         <Navbar/>
-      <div style={{background: url("https://www.ahospitalityclub.com/wp-content/uploads/2020/02/Key-Monastery-in-lahaul-spiti.jpg"), 
+      <div style={{background: "url(https://www.ahospitalityclub.com/wp-content/uploads/2020/02/Key-Monastery-in-lahaul-spiti.jpg)", 
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
