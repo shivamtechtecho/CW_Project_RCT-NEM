@@ -5,13 +5,26 @@ import "./routepages.css"
 
 export const JammuKashmir = () => {
   return (
+    <>
     <div className="jammupage">
         <Navbar/>
-      <div className="title">
+      <div style = {{
+        background: url("https://i0.wp.com/himtimes.com/wp-content/uploads/2023/07/Prashar-Lake-Trek-mandi-himachal-pradesh.jpg?w=800&ssl=1"), 
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+          height: "750px",
+          color: "white",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundAttachment: "fixed" 
+      }}>
         <h1 className="title_2">MANDI</h1>
       </div>
 
-      {/* Content Section */}
       <div className="content">
         <div className="image">
          
@@ -66,10 +79,12 @@ export const JammuKashmir = () => {
               <p>
               About 5 Km from Mandi town on NH-21 towards Kullu a photo art gallery exists and tourists visiting the area can drop in for some time to have a glimpse of history and important places of Himachal from the photographs and artefacts displayed in the art gallery.
               </p>
+              </div>
           </div>
         </div>
       </div>
       <Footer/>
     </div>
+    </>
   );
 };

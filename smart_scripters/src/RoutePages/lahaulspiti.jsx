@@ -7,7 +7,19 @@ export const LahaulSpiti = () => {
   return (
     <div className="jammupage">
         <Navbar/>
-      <div className="title">
+      <div style={{background: url("https://www.thethumpingnomad.com/wp-content/uploads/2022/12/5_Chandratal.jpg"), 
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+          height: "750px",
+          color: "white",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundAttachment: "fixed" 
+      }}>
         <h1 className="title_2">LAHAUL & SPITI</h1>
       </div>
 
@@ -37,7 +49,7 @@ export const LahaulSpiti = () => {
                 </p>
             </div>
 
-{/* image and lik is remaning */}
+{/* image and link is remaning */}
 
           </div>
         </div>
