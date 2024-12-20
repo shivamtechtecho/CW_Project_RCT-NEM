@@ -10,7 +10,7 @@
     color: #333;
     line-height: 1.6;
   }
-  
+
   /* Hero Section */
   .hero-section {
     background: url("https://images.pexels.com/photos/4448861/pexels-photo-4448861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 
@@ -25,63 +25,70 @@
     background-attachment: fixed; 
   }
   
+  .highlight-r{
+    color:white;
+  }
+  p{
+    color: black;
+  }
   
   .main-title {
-
+    color: black;
     font-family: serif;
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
   
   .subtitle {
+    color:black;
     font-family: cursive;
-    font-size: 1.5rem;
-    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
   }
   
   /* Content Section */
-  .content-section {
+  .content-section1 {
     background: url("http://www.wirralart.com/wp-content/uploads/2018/06/Gradient-Colour-Art.jpg") 
     no-repeat center center/cover;
     background-color: #8ab4da;
     padding: 4rem;
     
   }
-  
-  .image-text-container {
+
+  .image-text-container1 {
     background-color: rgb(102, 129, 152);
     display: flex;
     align-items:normal;
   }
   
-  .content-image {
+  .content-image1 {
     width: 40%;
     margin-right: 1.5rem;
   }
   
-  .content-text {
-    flex: 1;
-    font-size: 1.2rem;
+  .content-text1 {
+    color: black;
+    font-size: 1.8rem;
   }
   
-  .link-title {
-    color: #0456a7;
+  .link-title1 {
+    color: #0063c6;
     text-decoration: none;
     font-weight: bold;
   }
   
-  .link-title:hover {
+  .link-title1:hover {
     text-decoration: underline;
   }
   
   /* Destination Section */
-  .destination-section {
+  .destination-section2 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 2rem 0;
     padding: 2rem;
     background: url("https://images.pexels.com/photos/3737179/pexels-photo-3737179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center/cover;
     color: #fff; /* Ensures text is visible on the background */
@@ -89,7 +96,7 @@
   }
   
   
-  .destination-card {
+  .destination-card{
     text-align: center;
     margin: 1rem;
   }
@@ -99,7 +106,15 @@
     height: 200px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition for transform and width */
   }
+  
+  .card-image:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    width: 300px; /* Smoothly increase width */
+    cursor: pointer; 
+  }
+  
   
   .destination-card h3 {
     margin-top: 0.5rem;
