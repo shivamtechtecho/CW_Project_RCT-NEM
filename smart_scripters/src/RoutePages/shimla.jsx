@@ -7,7 +7,20 @@ export const Shimla = () => {
   return (
     <div className="jammupage">
         <Navbar/>
-      <div className="title">
+      <div style = {{
+        background: url("https://s7ap1.scene7.com/is/image/incredibleindia/cityscape-of-shimla-himachal-pradesh-city-1-hero?qlt=82&ts=1726730693575"), 
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+          height: "750px",
+          color: "white",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundAttachment: "fixed" 
+      }}>
         <h1 className="title_2">SHIMLA</h1>
       </div>
 
