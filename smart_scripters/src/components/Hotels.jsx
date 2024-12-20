@@ -14,7 +14,7 @@ import "../themeCss/light.css";
 import "../themeCss/dark.css";
 import { useContext } from "react";
 import { ThemeContext } from "../context/themeContext";
-
+import "./hotels.css";
 export const Hotels = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -169,7 +169,8 @@ export const Hotels = () => {
     {
       name: "Royal Mountain Resort",
       city: "Kullu",
-      imageUrl: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/541857366.jpg?k=939db25356dcf2162e7b71be907cd4489ab28f1f79deb6703c2d2030f31a4842&o=&hp=1",
+      imageUrl:
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/541857366.jpg?k=939db25356dcf2162e7b71be907cd4489ab28f1f79deb6703c2d2030f31a4842&o=&hp=1",
       description: "Modern amenities in a picturesque mountain setting.",
       price: "$160/night",
       facilities: ["Restaurant", "Adventure Activities", "Free Wi-Fi"],
@@ -196,7 +197,8 @@ export const Hotels = () => {
     {
       name: "Hillside Cottage",
       city: "Manali",
-      imageUrl: "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/room-imgs/202305181936597731-2249-d60ae62440ca11eeabaa0a58a9feac02.jpg",
+      imageUrl:
+        "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/room-imgs/202305181936597731-2249-d60ae62440ca11eeabaa0a58a9feac02.jpg",
       description: "Cozy cottages surrounded by pine trees and tranquility.",
       price: "$140/night",
       facilities: ["Free Breakfast", "Nature Trails", "Adventure Sports"],
@@ -206,59 +208,68 @@ export const Hotels = () => {
   return (
     <>
       <Navbar />
+    <div style={{marginTop:"90px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+      {hotels.map((hotel, index) => (
+        <Card
+          bg={theme === "dark" ? "gray.800" : "#dafbf8"}
+          key={index}
+          direction={{ base: "column", sm: "row" }}
+          overflow="hidden"
+          variant="outline"
+          mb={4}
+          width={"95%"}
+          borderRadius="md"
+          boxShadow="lg"
+          transition="all 0.3s ease"
+          _hover={{
+            transform: "scale(1.05)",
+            boxShadow: "xl",
+          }}
+        >
+          <Image
+            objectFit="cover"
+            maxW={{ base: "100%", sm: "200px" }}
+            src={hotel.imageUrl}
+            alt={hotel.name}
+            borderTopRadius={{ base: "md", sm: "0" }}
+          />
 
-      {hotels.map((hotel, index) => (  
-    <Card  
-        bg={theme === "dark" ? "gray.800" : "#dafbf8"}  
-        key={index}  
-        direction={{ base: "column", sm: "row" }}  
-        overflow="hidden"  
-        variant="outline"  
-        mb={4}  
-        borderRadius="md"  
-        boxShadow="lg"  
-        transition="all 0.3s ease"  
-        _hover={{  
-            transform: "scale(1.05)",  
-            boxShadow: "xl",  
-        }}  
-    >  
-        <Image  
-            objectFit="cover"  
-            maxW={{ base: "100%", sm: "200px" }}  
-            src={hotel.imageUrl}  
-            alt={hotel.name}  
-            borderTopRadius={{ base: "md", sm: "0" }}  
-        />  
+          <Stack spacing={3} p={4}>
+            <CardBody>
+              <Heading
+                size="md"
+                color={theme === "dark" ? "white" : "gray.800"}
+              >
+                {hotel.name}
+              </Heading>
+              <Text py="2" color={theme === "dark" ? "gray.400" : "gray.600"}>
+                {hotel.description}
+              </Text>
+              <Text fontWeight="bold" fontSize="lg" color="teal.500">
+                {hotel.price}
+              </Text>
+              <Text color={theme === "dark" ? "gray.400" : "gray.600"}>
+                City: {hotel.city}
+              </Text>
+              <Text color={theme === "dark" ? "gray.400" : "gray.600"}>
+                Facilities: {hotel.facilities.join(", ")}
+              </Text>
+            </CardBody>
 
-        <Stack spacing={3} p={4}>  
-            <CardBody>  
-                <Heading size="md" color={theme === "dark" ? "white" : "gray.800"}>  
-                    {hotel.name}  
-                </Heading>  
-                <Text py="2" color={theme === "dark" ? "gray.400" : "gray.600"}>  
-                    {hotel.description}  
-                </Text>  
-                <Text fontWeight="bold" fontSize="lg" color="teal.500">  
-                    {hotel.price}  
-                </Text>  
-                <Text color={theme === "dark" ? "gray.400" : "gray.600"}>City: {hotel.city}</Text>  
-                <Text color={theme === "dark" ? "gray.400" : "gray.600"}>Facilities: {hotel.facilities.join(", ")}</Text>  
-            </CardBody>  
-
-            <CardFooter>  
-                <Button   
-                    variant="solid"   
-                    colorScheme="teal"   
-                    width="full"   
-                    _hover={{ bg: "teal.600" }}  
-                >  
-                    Book Now  
-                </Button>  
-            </CardFooter>  
-        </Stack>  
-    </Card>  
-))}
+            <CardFooter>
+              <Button
+                variant="solid"
+                colorScheme="teal"
+                width="full"
+                _hover={{ bg: "teal.600" }}
+              >
+                Book Now
+              </Button>
+            </CardFooter>
+          </Stack>
+        </Card>
+      ))}
+    </div>
 
       <Footer />
     </>

@@ -1,25 +1,25 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-
-import React from "react";
+import React, { useContext } from "react";
+import "./routepages.css"
+import { ThemeContext } from "../context/themeContext";
 
 export const JammuKashmir = () => {
+
+  const {theme, toggleTheme} = useContext(ThemeContext);
+
   return (
-    <div className="landing-page">
+    <div className="jammupage">
         <Navbar/>
-      <div className="hero-section">
-        <h1 className="main-title">JAMMU & KASHMIR</h1>
+      <div className="title">
+        <h1 className="title_2">JAMMU & KASHMIR</h1>
       </div>
 
       {/* Content Section */}
-      <div className="content-section">
-        <div className="image-text-container">
-          <img
-            src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc="
-            alt="Himalayan Travel"
-            className="content-image"
-          />
-          <div className="content-text">
+      <div className="content" style={{backgroundColor: theme=="dark"? "skyBlue" : "midnightBlue", color: theme==="dark"? "midnightblue" : "grey"}}>
+        <div className="image">
+         
+          <div className="content_2">
             <h2>Jammu & Kashmir: A Detailed Guide to Famous Attractions </h2>
             <div>
               <h3>1. The Majestic Himalayas</h3>
@@ -193,6 +193,111 @@ export const JammuKashmir = () => {
                 A traditional green tea infused with saffron, almonds, and
                 cardamom, perfect for chilly evenings.
               </p>
+            </div>
+            <div>
+                <h2>Handicrafts</h2>
+              <h3>Kashmir’s craftsmanship is world-famous.  </h3>
+            </div>
+            <div>
+              <h3> - Pashmina Shawls:</h3>
+              <p>
+              Handwoven shawls made from fine Pashmina wool are highly valued for their softness and intricate patterns. 
+              </p>
+            </div>
+            <div>
+              <h3> - Carpets:</h3>
+              <p>
+              Hand-knotted silk and wool carpets with elaborate Persian-inspired designs.  
+              </p>
+            </div>
+            <div>
+              <h3> - Walnut Wood Carving:</h3>
+              <p>
+              Exquisite wooden furniture and artifacts carved by skilled artisans.
+              </p>
+            </div>
+            <div>
+                <h2>Music and Dance  </h2>
+            </div>
+            <div>
+              <h3> - Rouf:</h3>
+              <p>
+              A traditional dance performed by women during festivals. 
+              </p>
+            </div>
+            <div>
+              <h3> - Sufiana Music:</h3>
+              <p>
+              A classical genre that blends Persian and Kashmiri styles, often performed with traditional instruments like the Santoor and Rabab.
+              </p>
+            </div>
+            <div>
+                <h2>Festivals </h2>
+            </div>
+            <div>
+              <h3> - Shikara Festival:</h3>
+              <p>
+              Held on Dal Lake, showcasing traditional Kashmiri culture with boat races, music, and crafts.  
+              </p>
+            </div>
+            <div>
+              <h3> - Tulip Festival:</h3>
+              <p>
+              Celebrated in Srinagar’s Indira Gandhi Memorial Tulip Garden, Asia's largest tulip garden.  
+              </p>
+            </div>
+            <div>
+              <h3> - Hemis Festival:</h3>
+              <p>
+              A Buddhist festival in Ladakh, featuring masked dances and cultural performances.
+              </p>
+            </div>
+            <div>
+                <h2>Adventure Activities   </h2>
+            </div>
+            <div>
+                <h2>Trekking</h2>
+            </div>
+            <div>
+              <h3> - Kashmir Great Lakes Trek:</h3>
+              <p>
+              Explore alpine meadows and glacial lakes on this moderate trek. 
+              </p>
+            </div>
+            <div>
+              <h3> - Chadar Trek:</h3>
+              <p>
+              Walk on the frozen Zanskar River during winter for a unique experience.  
+              </p>
+            </div>
+            <div>
+                <h2>Skiing </h2>
+            </div>
+            <div>
+              <h3> - Gulmarg:</h3>
+              <p>
+              One of Asia’s top skiing destinations, offering runs for both beginners and advanced skiers. The Gulmarg Gondola provides access to high-altitude slopes.
+              </p>
+            </div>
+            <div>
+                <h2>White-Water Rafting   </h2>
+            </div>
+            <div>
+              <h3> - Lidder River (Pahalgam):</h3>
+              <p>
+              A mix of rapids for all skill levels.  
+              </p>
+            </div>
+            <div>
+              <h3> - Zanskar River (Ladakh):</h3>
+              <p>
+              Known for its challenging rapids and stunning canyon views. 
+              </p>
+            </div>
+            <div>
+                <h3>Plan Your Visit</h3>
+                <h3>Jammu & Kashmir is not just a destination; it's an experience of unparalleled beauty, spirituality, and adventure. From serene lakes to thrilling treks and vibrant cultural festivals, every moment in this region is unforgettable.  </h3>
+                <h3>Book your trip today to explore the paradise on Earth!</h3>
             </div>
           </div>
         </div>
