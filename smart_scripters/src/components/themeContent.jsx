@@ -12,7 +12,7 @@ import { ContactUs } from "../RoutePages/ContactUs";
 import { HimachalPradesh } from "../RoutePages/HimachalPradesh";
 import { JammuKashmir } from "../RoutePages/JammuKashmir";
 import { Rafting } from "../RoutePages/Rafting";
-// import { Trekking } from "../RoutePages/trekking";
+import { Trekking } from "../RoutePages/trekking";
 import { Videos } from "../RoutePages/Videos";
 import { WinterExpedition } from "../RoutePages/WinterExp";
 import RegistrationForm from "./Form";

@@ -9,7 +9,7 @@ export const Mandi = () => {
     <div className="jammupage">
         <Navbar/>
       <div style = {{
-        background: "url(https://i0.wp.com/himtimes.com/wp-content/uploads/2023/07/Prashar-Lake-Trek-mandi-himachal-pradesh.jpg?w=800&ssl=1)", 
+        background: "url(https://images.pexels.com/photos/29793799/pexels-photo-29793799/free-photo-of-scenic-mountain-river-at-dawn.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)", 
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
