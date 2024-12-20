@@ -3,9 +3,9 @@ import { Navbar } from "../components/Navbar";
 import React from "react";
 import "./routepages.css"
 
-export const JammuKashmir = () => {
+export const Mandi = () => {
   return (
-    <>
+    <div>
     <div className="jammupage">
         <Navbar/>
       <div style = {{
@@ -85,6 +85,6 @@ export const JammuKashmir = () => {
       </div>
       <Footer/>
     </div>
-    </>
+    </div>
   );
 };
