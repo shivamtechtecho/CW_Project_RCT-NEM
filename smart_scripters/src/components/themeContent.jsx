@@ -8,7 +8,6 @@ import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { AbooutUs } from "../RoutePages/Aboutus";
 import { Advature } from "../RoutePages/Advanture";
-import { ContactUs } from "../RoutePages/ContactUs";
 import { HimachalPradesh } from "../RoutePages/HimachalPradesh";
 import { JammuKashmir } from "../RoutePages/JammuKashmir";
 import { Rafting } from "../RoutePages/Rafting";
@@ -22,6 +21,7 @@ import { Spiti } from "../RoutePages/spiti";
 import { Lahaul } from "../RoutePages/lahaul";
 import { LahaulSpiti } from "../RoutePages/lahaulspiti";
 import { Mandi } from "../RoutePages/mandi";
+import { ContactPage } from "./ContactPage";
 
 export const ThemedContent = () => {
   const { theme, toggleTheme } = useContext(ThemeContext); // Use the context to get theme and toggle function
@@ -34,7 +34,7 @@ export const ThemedContent = () => {
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/aboutUs" element={<AbooutUs />} />
           <Route path="/adventure" element={<Advature />} />
-          <Route path="/Contact" element={<ContactUs />} />
+          <Route path="/Contact" element={<ContactPage />} />
           <Route path="/HimachalPradesh" element={<HimachalPradesh />} />
           <Route path="/JammuKashmir" element={<JammuKashmir />} />
           <Route path="/Rafting" element={<Rafting />} />
