@@ -22,6 +22,7 @@ import { Lahaul } from "../RoutePages/lahaul";
 import { LahaulSpiti } from "../RoutePages/lahaulspiti";
 import { Mandi } from "../RoutePages/mandi";
 import { ContactPage } from "./ContactPage";
+import { Pricing } from "./pricing";
 
 export const ThemedContent = () => {
   const { theme, toggleTheme,sign,handleSign } = useContext(ThemeContext); // Use the context to get theme and toggle function
@@ -50,6 +51,7 @@ export const ThemedContent = () => {
           <Route path="/LahaulSpiti" element={<LahaulSpiti />} />
           <Route path="/Mandi" element={<Mandi />} />
           <Route path="/Videos" element={<Videos />} />
+          <Route path="/Pricing" element={<Pricing/>}/>
         </Routes>
         {/* <Hotels/>  
         <LandingPage/>  */}
