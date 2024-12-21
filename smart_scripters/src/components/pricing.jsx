@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";  
 import { ThemeContext } from "../context/themeContext";  
 
-// CSS styles for animations  
+
 const fadeInAnimation = {  
     animation: 'fadeIn 1s'  
 };  
@@ -21,7 +21,7 @@ export const Pricing = () => {
             : "url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",  
         backgroundSize: 'cover',  
         backgroundAttachment: 'fixed',  
-        ...fadeInAnimation // Use fade-in effect  
+        ...fadeInAnimation  
     };  
 
     const pricingCardStyle = {  
@@ -81,13 +81,3 @@ export const Pricing = () => {
     );  
 }  
 
-// CSS for fadeIn keyframes - Add this to your CSS file  
- 
-// @keyframes fadeIn {  
-//     from {  
-//         opacity: 0;  
-//     }  
-//     to {  
-//         opacity: 1;  
-//     }  
-// }  
