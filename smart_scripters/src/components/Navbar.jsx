@@ -58,10 +58,10 @@ export const Navbar = () => {
                   <Link to="/"><Button variant="link" colorScheme="black" isActive>  
                       Home  
                   </Button></Link>
-                  <Link to={sign?"/registration":"/aboutUs"}><Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
+                  <Link to={!sign?"/registration":"/aboutUs"}><Button onClick={()=>!sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
                       About  
                   </Button></Link>  
-                  <Link to={sign?"/registration":"/hotels"}><Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
+                  <Link to={!sign?"/registration":"/hotels"}><Button onClick={()=>!sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
                       Hotel
                   </Button></Link>
                   <Menu>  
@@ -73,14 +73,14 @@ export const Navbar = () => {
                           Advanture  
                       </MenuButton>  
                       <MenuList bg={theme=="dark"?"black":"white"} >  
-                          <Link to={sign?"/registration":"/Trekking"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Trekking</MenuItem></Link>
-                          <Link to={sign?"/registration":"/Rafting"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Rafting</MenuItem></Link>  
-                          <Link to={sign?"/registration":"/WinterExpedition"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Winter Expedition</MenuItem></Link>
+                          <Link to={!sign?"/registration":"/Trekking"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Trekking</MenuItem></Link>
+                          <Link to={!sign?"/registration":"/Rafting"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Rafting</MenuItem></Link>  
+                          <Link to={!sign?"/registration":"/WinterExpedition"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Winter Expedition</MenuItem></Link>
                           <MenuDivider />  
                           <Link to="/hotels"><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Other</MenuItem></Link>
                       </MenuList>  
                   </Menu>  
-                  <Link to={sign?"/registration":"/Pricing"}><Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
+                  <Link to={!sign?"/registration":"/Pricing"}><Button onClick={()=>!sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
                       Pricing  
                   </Button></Link>
 
@@ -94,24 +94,24 @@ export const Navbar = () => {
                           Travelling  
                       </MenuButton>  
                       <MenuList bg={theme=="dark"?"black":"white"} >  
-                          <Link to={sign?"/registration":"/Kullu"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Kullu</MenuItem>  </Link>
-                          <Link to={sign?"/registration":"/Manali"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Manali</MenuItem></Link>  
-                          <Link to={sign?"/registration":"/Shimla"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Shimla</MenuItem></Link>
-                          <Link to={sign?"/registration":"/Spiti"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Spiti</MenuItem>  </Link>
-                          <Link to={sign?"/registration":"/Lahaul"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Lahaul</MenuItem></Link>  
-                          <Link to={sign?"/registration":"/LahaulSpiti"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>LahaulSpiti</MenuItem></Link>  
-                          <Link to={sign?"/registration":"/JammuKashmir"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Jammu Kashmir</MenuItem>  </Link>
-                          <Link to={sign?"/registration":"/HimachalPradesh"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Himachal Pradesh</MenuItem></Link>  
-                          <Link to={sign?"/registration":"/Mandi"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Mandi</MenuItem></Link>
+                          <Link to={!sign?"/registration":"/Kullu"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Kullu</MenuItem>  </Link>
+                          <Link to={!sign?"/registration":"/Manali"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Manali</MenuItem></Link>  
+                          <Link to={!sign?"/registration":"/Shimla"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Shimla</MenuItem></Link>
+                          <Link to={!sign?"/registration":"/Spiti"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Spiti</MenuItem>  </Link>
+                          <Link to={!sign?"/registration":"/Lahaul"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Lahaul</MenuItem></Link>  
+                          <Link to={!sign?"/registration":"/LahaulSpiti"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>LahaulSpiti</MenuItem></Link>  
+                          <Link to={!sign?"/registration":"/JammuKashmir"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Jammu Kashmir</MenuItem>  </Link>
+                          <Link to={!sign?"/registration":"/HimachalPradesh"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Himachal Pradesh</MenuItem></Link>  
+                          <Link to={!sign?"/registration":"/Mandi"}><MenuItem onClick={()=>!sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Mandi</MenuItem></Link>
                           <MenuDivider />  
                           <Link to="/"><MenuItem bg={theme=="dark"?"black":"white"} onClick={() => alert('Clicked Other!')}>Other</MenuItem></Link>
                       </MenuList>  
                   </Menu>  
 
-                  <Link to={sign?"/registration":"/Contact"}><Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
+                  <Link to={!sign?"/registration":"/Contact"}><Button onClick={()=>!sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
                       Contact
                   </Button></Link>  
-                  <Link to={sign?"/registration":"/"} style={{color:"white",backgroundColor:"darkgray",padding:"5px 10px",borderRadius:"20px",border:"0"}}><button onClick={handleSign}>{sign?"LOGIN":"Log-OUT"}</button></Link>
+                  <Link to={!sign?"/registration":"/"} style={{color:"white",backgroundColor:"darkgray",padding:"5px 10px",borderRadius:"20px",border:"0"}}><button onClick={handleSign}>{!sign?"LOGIN":"Log-OUT"}</button></Link>
               </Flex>  
               <button onClick={toggleTheme}>💡⚫</button>  
           </Flex>  
