@@ -9,8 +9,15 @@ export const ThemeProvider = ({ children }) => {
         setTheme(prevTheme => (prevTheme === "light" ? "dark" : "light"));  
     };  
 
+    const [sign,setSign] = useState(false)
+
+    
+    function handleSign(){
+        setSign(!sign)
+    }
+
     return (  
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>  
+        <ThemeContext.Provider value={{ theme, toggleTheme,sign,handleSign }}>  
             {children}  
         </ThemeContext.Provider>  
     );  

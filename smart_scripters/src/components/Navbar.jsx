@@ -18,7 +18,9 @@ import { ThemeContext } from '../context/themeContext';
 
 export const Navbar = () => {  
   const { isOpen, onOpen, onClose } = useDisclosure();  
-  const { theme,toggleTheme } = useContext(ThemeContext);  
+  const { theme,toggleTheme,sign,handleSign } = useContext(ThemeContext);  
+
+
 
   return (  
       <Box px={12} position={'fixed'} width={"100%"} left={"0px"} top={"0px"} bg={theme=="dark"?"black":"gray"} zIndex={"1000"}  borderBottomWidth="1px" borderColor="gray.200" dark={{ bg: 'gray.900' }}>  
@@ -56,10 +58,10 @@ export const Navbar = () => {
                   <Link to="/"><Button variant="link" colorScheme="black" isActive>  
                       Home  
                   </Button></Link>
-                  <Link to="/aboutUs"><Button variant="link" colorScheme="black">  
+                  <Link to={sign?"/registration":"/aboutUs"}><Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
                       About  
                   </Button></Link>  
-                  <Link to="/hotels"><Button variant="link" colorScheme="black">  
+                  <Link to={sign?"/registration":"/hotels"}><Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
                       Hotel
                   </Button></Link>
                   <Menu>  
@@ -71,14 +73,14 @@ export const Navbar = () => {
                           Advanture  
                       </MenuButton>  
                       <MenuList bg={theme=="dark"?"black":"white"} >  
-                          <Link to="/Trekking"><MenuItem bg={theme=="dark"?"black":"white"} >Trekking</MenuItem></Link>
-                          <Link to="/Rafting"><MenuItem bg={theme=="dark"?"black":"white"} >Rafting</MenuItem></Link>  
-                          <Link to="/WinterExpedition"><MenuItem bg={theme=="dark"?"black":"white"} >Winter Expedition</MenuItem></Link>
+                          <Link to={sign?"/registration":"/Trekking"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Trekking</MenuItem></Link>
+                          <Link to={sign?"/registration":"/Rafting"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Rafting</MenuItem></Link>  
+                          <Link to={sign?"/registration":"/WinterExpedition"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Winter Expedition</MenuItem></Link>
                           <MenuDivider />  
-                          <Link to="/hotels"><MenuItem bg={theme=="dark"?"black":"white"} >Other</MenuItem></Link>
+                          <Link to="/hotels"><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Other</MenuItem></Link>
                       </MenuList>  
                   </Menu>  
-                  <Button variant="link" colorScheme="black">  
+                  <Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
                       Pricing  
                   </Button>  
 
@@ -92,24 +94,24 @@ export const Navbar = () => {
                           Travelling  
                       </MenuButton>  
                       <MenuList bg={theme=="dark"?"black":"white"} >  
-                          <Link to="/Kullu"><MenuItem bg={theme=="dark"?"black":"white"}>Kullu</MenuItem>  </Link>
-                          <Link to="/Manali"><MenuItem bg={theme=="dark"?"black":"white"}>Manali</MenuItem></Link>  
-                          <Link to="/Shimla"><MenuItem bg={theme=="dark"?"black":"white"}>Shimla</MenuItem></Link>
-                          <Link to="/Spiti"><MenuItem bg={theme=="dark"?"black":"white"}>Spiti</MenuItem>  </Link>
-                          <Link to="/Lahaul"><MenuItem bg={theme=="dark"?"black":"white"}>Lahaul</MenuItem></Link>  
-                          <Link to="/LahaulSpiti"><MenuItem bg={theme=="dark"?"black":"white"}>LahaulSpiti</MenuItem></Link>  
-                          <Link to="/JammuKashmir"><MenuItem bg={theme=="dark"?"black":"white"}>Jammu Kashmir</MenuItem>  </Link>
-                          <Link to="/HimachalPradesh"><MenuItem bg={theme=="dark"?"black":"white"}>Himachal Pradesh</MenuItem></Link>  
-                          <Link to="/Mandi"><MenuItem bg={theme=="dark"?"black":"white"}>Mandi</MenuItem></Link>
+                          <Link to={sign?"/registration":"/Kullu"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Kullu</MenuItem>  </Link>
+                          <Link to={sign?"/registration":"/Manali"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Manali</MenuItem></Link>  
+                          <Link to={sign?"/registration":"/Shimla"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Shimla</MenuItem></Link>
+                          <Link to={sign?"/registration":"/Spiti"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Spiti</MenuItem>  </Link>
+                          <Link to={sign?"/registration":"/Lahaul"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Lahaul</MenuItem></Link>  
+                          <Link to={sign?"/registration":"/LahaulSpiti"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>LahaulSpiti</MenuItem></Link>  
+                          <Link to={sign?"/registration":"/JammuKashmir"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Jammu Kashmir</MenuItem>  </Link>
+                          <Link to={sign?"/registration":"/HimachalPradesh"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Himachal Pradesh</MenuItem></Link>  
+                          <Link to={sign?"/registration":"/Mandi"}><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"}>Mandi</MenuItem></Link>
                           <MenuDivider />  
                           <Link to="/"><MenuItem bg={theme=="dark"?"black":"white"} onClick={() => alert('Clicked Other!')}>Other</MenuItem></Link>
                       </MenuList>  
                   </Menu>  
 
-                  <Link to="/Contact"><Button variant="link" colorScheme="black">  
+                  <Link to={sign?"/registration":"/Contact"}><Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
                       Contact
                   </Button></Link>  
-                  <Link to="/registration" style={{color:"white"}}>SIGN-UP</Link>
+                  <Link to={sign?"/registration":"/"} style={{color:"white",backgroundColor:"darkgray",padding:"5px 10px",borderRadius:"20px",border:"0"}}><button onClick={handleSign}>{sign?"LOGIN":"Log-OUT"}</button></Link>
               </Flex>  
               <button onClick={toggleTheme}>💡⚫</button>  
           </Flex>  
