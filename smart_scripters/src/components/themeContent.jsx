@@ -24,7 +24,7 @@ import { Mandi } from "../RoutePages/mandi";
 import { ContactPage } from "./ContactPage";
 
 export const ThemedContent = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext); // Use the context to get theme and toggle function
+  const { theme, toggleTheme,sign,handleSign } = useContext(ThemeContext); // Use the context to get theme and toggle function
 
   return (
     <div>
