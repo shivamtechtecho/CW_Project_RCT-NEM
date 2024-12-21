@@ -3,23 +3,24 @@ import { Navbar } from "../components/Navbar";
 import React, { useContext } from "react";
 import "./routepages.css"
 import { ThemeContext } from "../context/themeContext";
+import  {Link} from "react-router-dom"
 
 export const JammuKashmir = () => {
 
   const {theme, toggleTheme} = useContext(ThemeContext);
 
   return (
-    <div className="jammupage" style={{backgroundColor: theme=="dark"? "skyBlue" : "midnightBlue", color: theme==="dark"? "midnightblue" : "grey"}}>
+    <div className="jammupage" style={{backgroundColor: theme==="dark"? "black": "white"}}>
         <Navbar/>
       <div className="title">
-        <h1 className="title_2">JAMMU & KASHMIR</h1>
+        <h1 className="title_2" style={{color: theme==="dark"? "purple" : "black"}}>JAMMU & KASHMIR</h1>
       </div>
 
       {/* Content Section */}
-      <div className="content" style={{backgroundColor: theme=="dark"? "skyBlue" : "midnightBlue", color: theme==="dark"? "midnightblue" : "grey"}}>
+      <div className="content" style={{backgroundColor: theme=== "dark"? "white" : "purple"}}>
         <div className="image">
          
-          <div className="content_2">
+          <div className="content_2" style={{backgroundColor: theme==="dark"? "black": "white"}}>
             <h2>Jammu & Kashmir: A Detailed Guide to Famous Attractions </h2>
             <div>
               <h3>1. The Majestic Himalayas</h3>
@@ -299,8 +300,34 @@ export const JammuKashmir = () => {
                 <h3>Jammu & Kashmir is not just a destination; it's an experience of unparalleled beauty, spirituality, and adventure. From serene lakes to thrilling treks and vibrant cultural festivals, every moment in this region is unforgettable.  </h3>
                 <h3>Book your trip today to explore the paradise on Earth!</h3>
             </div>
+            
           </div>
         </div>
+        <div 
+            style={{ display: "flex", justifyContent: "space-evenly", backgroundColor: "white"}}>
+              <Link to="/winterexp">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/6831094/pexels-photo-6831094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>WINTER Expedition</h3>
+              </div>
+              </Link>
+              <Link to="/trekking">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/1002272/pexels-photo-1002272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>TREKKING</h3>
+              </div>
+              </Link>
+              <Link to="/rafting">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/2025306/pexels-photo-2025306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>RAFTING</h3>
+              </div>
+              </Link>
+              
+            </div>
       </div>
       <Footer/>
     </div>

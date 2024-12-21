@@ -52,21 +52,22 @@
   }
 
   h2 {
-    color: #003366;
+    color: rgb(144, 5, 144);
     font-size: 2rem;
     font-weight: bold;
     margin-top: 30px;
+    text-align: center;
   }
 
   h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: rgb(170, 35, 170);
     margin-bottom: 10px;
   }
   
   p {
     font-size: 1rem;
-    color: #666;
+    color:rgb(107, 98, 98);
     line-height: 1.6;
     margin-bottom: 20px;
   }
@@ -104,11 +105,13 @@
   }
   
   .content_2{
-    text-align: center;
-    padding: 20%;
+    /* text-align: center; */
+    padding: 10%;
     padding-top: 5%;
     font-family: Lexend Arial;
     font-weight: 400;
+    color: white;
+    /* vertical-align: left; */
     
   }
 

@@ -1,11 +1,14 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import React from "react";
+import React, { useContext } from "react";
 import "./routepages.css"
+import { ThemeContext } from "../context/themeContext";
+import { Link } from "react-router-dom";
 
 export const Shimla = () => {
+  const {theme, toggleTheme} = useContext(ThemeContext);
   return (
-    <div className="jammupage">
+    <div className="jammupage" style={{backgroundColor: theme==="dark"? "black": "white"}}>
         <Navbar/>
       <div style = {{
         background: "url(https://s7ap1.scene7.com/is/image/incredibleindia/cityscape-of-shimla-himachal-pradesh-city-1-hero?qlt=82&ts=1726730693575)", 
@@ -21,14 +24,14 @@ export const Shimla = () => {
           alignItems: "center",
           backgroundAttachment: "fixed" 
       }}>
-        <h1 className="title_2">SHIMLA</h1>
+        <h1 className="title_2" style={{color: theme==="dark"? "purple" : "black"}}>SHIMLA</h1>
       </div>
 
       {/* Content Section */}
-      <div className="content">
+      <div className="content" style={{backgroundColor: theme=== "dark"? "white" : "purple"}}>
         <div className="image">
          
-          <div className="content_2">
+          <div className="content_2" style={{backgroundColor: theme==="dark"? "black": "white"}}>
             <h2>SHIMLA</h2>
             <div>
                 <p>
@@ -41,7 +44,7 @@ export const Shimla = () => {
                 Shimla is an excellent base for treks in the surrounding hills or beyond, rafting and trout fishing at Tattapani (51 km from Shimla) and golf at the 9-hole golf course at Naldehra. In winter, there is skiing at Kufri and Narkanda from January to mid-March. You can also go shopping at some of Shimla’s most lively and colourful markets. You can entertain yourself in a cultural or dramatic performance or take pleasure in a sporting activity. A wide range of activities and attractions will surely keep you occupied all the time. Charleville Mansion in Shimla Viceregal Lodge, formerly the residence of the British Viceroy of India that houses the Indian Institute of Advance Study, is also worth a visit.
                 </p>
 
-                <ul>
+                <ul style={{color: "grey"}}>
                     <li>The Mall is the main shopping street of Shimla. It has many restaurants, clubs, banks, bars, post offices, and tourist offices. The lower part of Gaiety Theatre lies here.</li>
                     <li>
                     The Ridge is a large open space, which is situated alongside The Mall Road and hosts all the cultural activities in the city. Christ Church situated on the Ridge is the second oldest church in Northern India. Inside there are stained glass windows that represent faith, hope, charity, fortitude, patience, and humility. There are State Library and Gaiety Heritage Cultural Complex too which are some of the notable buildings located here.
@@ -102,6 +105,30 @@ export const Shimla = () => {
             </div>
           </div>
         </div>
+        <div 
+            style={{ display: "flex", justifyContent: "space-evenly", backgroundColor: "white"}}>
+              <Link to="/spiti">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/1555504/pexels-photo-1555504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>SPITI</h3>
+              </div>
+              </Link>
+              <Link to="/rafting">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/9065578/pexels-photo-9065578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>RAFTING</h3>
+              </div>
+              </Link>
+              <Link to="/trekking">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/3604912/pexels-photo-3604912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>TREKKING</h3>
+              </div>
+              </Link>
+              </div>
       </div>
       <Footer/>
     </div>
