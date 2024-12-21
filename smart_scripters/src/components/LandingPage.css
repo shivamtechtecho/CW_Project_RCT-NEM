@@ -91,8 +91,8 @@
     flex-wrap: wrap;
     padding: 2rem;
     background: url("https://images.pexels.com/photos/3737179/pexels-photo-3737179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center/cover;
-    color: #fff; /* Ensures text is visible on the background */
-    position: relative; /* Required for layering */
+    color: #fff; 
+    position: relative; 
   }
   
   
@@ -106,12 +106,12 @@
     height: 200px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition for transform and width */
+    transition: transform 0.3s ease, width 0.3s ease; 
   }
   
   .card-image:hover {
-    transform: scale(1.1); /* Slightly enlarge the image */
-    width: 300px; /* Smoothly increase width */
+    transform: scale(1.1); 
+    width: 300px; 
     cursor: pointer; 
   }
   
