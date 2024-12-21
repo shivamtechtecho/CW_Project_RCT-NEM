@@ -80,9 +80,9 @@ export const Navbar = () => {
                           <Link to="/hotels"><MenuItem onClick={()=>sign?alert("Please Sign-IN!!!"):""} bg={theme=="dark"?"black":"white"} >Other</MenuItem></Link>
                       </MenuList>  
                   </Menu>  
-                  <Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
+                  <Link to={sign?"/registration":"/Pricing"}><Button onClick={()=>sign?alert("Please Sign-IN!!!"):""} variant="link" colorScheme="black">  
                       Pricing  
-                  </Button>  
+                  </Button></Link>
 
                   {/* Dropdown for Travelling */}  
                   <Menu>  
