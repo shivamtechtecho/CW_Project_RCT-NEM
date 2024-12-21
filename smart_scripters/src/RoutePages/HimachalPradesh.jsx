@@ -1,12 +1,18 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import React from "react";
+import React, { useContext } from "react";
 import "./routepages.css"
+import { ThemeContext } from "../context/themeContext";
+import { Link } from "react-router-dom";
+
 
 export const HimachalPradesh = () => {
+
+  const {theme, toggleTheme} = useContext(ThemeContext);
+
   return (
     <div>
-    <div className="jammupage">
+    <div className="jammupage" style={{backgroundColor: theme=="dark"? "black" : "white", color: theme==="dark"? "white" : "black"}}>
         <Navbar/>
       <div style = {{
         background: "url(https://images.pexels.com/photos/2961109/pexels-photo-2961109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)", 
@@ -22,13 +28,13 @@ export const HimachalPradesh = () => {
           alignItems: "center",
           backgroundAttachment: "fixed" 
       }}>
-        <h1 className="title_2">Himachal Pradesh</h1>
+        <h1 className="title_2" style={{color: theme==="dark"? "purple": "black"}}>Himachal Pradesh</h1>
       </div>
 
-      <div className="content">
+      <div className="content" style={{backgroundColor: theme=== "dark"? "white" : "purple"}}>
         <div className="image">
          
-          <div className="content_2">
+          <div className="content_2" style={{backgroundColor: theme=="dark"? "black" : "white", color: theme==="dark"? "white" : "black"}}>
             <h2>HISTORY</h2>
             <div>
               
@@ -80,6 +86,31 @@ export const HimachalPradesh = () => {
               About 5 Km from Mandi town on NH-21 towards Kullu a photo art gallery exists and tourists visiting the area can drop in for some time to have a glimpse of history and important places of Himachal from the photographs and artefacts displayed in the art gallery.
               </p>
               </div>
+              <div 
+            style={{ display: "flex", justifyContent: "space-evenly", backgroundColor: "white"}}>
+              <Link to="/kullu">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/1555504/pexels-photo-1555504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>KULLU</h3>
+              </div>
+              </Link>
+              <Link to="/shimla">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/842155/pexels-photo-842155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>SHIMLA</h3>
+              </div>
+              </Link>
+              <Link to="/trekking">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/236973/pexels-photo-236973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>TREKKING</h3>
+              </div>
+              </Link>
+              
+            </div>
           </div>
         </div>
       </div>

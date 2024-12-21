@@ -1,11 +1,14 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import React from "react";
+import React, { useContext } from "react";
 import "./routepages.css"
+import { ThemeContext } from "../context/themeContext";
+import { Link } from "react-router-dom";
 
 export const Spiti = () => {
+  const {theme, toggleTheme} = useContext(ThemeContext);
   return (
-    <div className="jammupage">
+    <div className="jammupage" style={{backgroundColor: theme=== "dark"? "black" : "white"}}>
         <Navbar/>
       <div style = {{
         background: "url(https://dr7f10k1l6bnm.cloudfront.net/wp-content/uploads/2024/04/spiti-valley.jpg)", 
@@ -21,14 +24,14 @@ export const Spiti = () => {
           alignItems: "center",
           backgroundAttachment: "fixed" 
       }}>
-        <h1 className="title_2">SPITI</h1>
+        <h1 className="title_2" style={{color: theme==="dark"? "purple" : "black"}}>SPITI</h1>
       </div>
 
       {/* Content Section */}
-      <div className="content">
+      <div className="content" style={{backgroundColor: theme=== "dark"? "white" : "purple"}}>
         <div className="image">
          
-          <div className="content_2">
+          <div className="content_2" style={{backgroundColor: theme=== "dark"? "black" : "white"}}>
             <h2>TOURIST PLACES IN SPITI</h2>
             <div>
               <h3>KAZA</h3>
@@ -78,6 +81,31 @@ export const Spiti = () => {
             </div>
           </div>
         </div>
+        <div 
+            style={{ display: "flex", justifyContent: "space-evenly", backgroundColor: "white"}}>
+              <Link to="/jammukashmir">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/29842101/pexels-photo-29842101/free-photo-of-snow-covered-mountains-in-kashmir-with-pine-trees.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>JAMMU KASHMIR</h3>
+              </div>
+              </Link>
+              <Link to="/mandi">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/26110235/pexels-photo-26110235/free-photo-of-man-on-boat-on-dal-lake-in-india.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>MANDI</h3>
+              </div>
+              </Link>
+              <Link to="/rafting">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/1305095/pexels-photo-1305095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>RAFTING</h3>
+              </div>
+              </Link>
+              
+            </div>
       </div>
       <Footer/>
     </div>

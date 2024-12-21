@@ -1,9 +1,13 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import React from "react";
+import React, { useContext } from "react";
 import "./routepages.css"
+import { ThemeContext } from "../context/themeContext";
+import { Lahaul } from "./lahaul";
+import { Link } from "react-router-dom";
 
 export const LahaulSpiti = () => {
+  const {theme, toggleTheme} = useContext(ThemeContext);
   return (
     <div className="jammupage">
         <Navbar/>
@@ -20,14 +24,14 @@ export const LahaulSpiti = () => {
           alignItems: "center",
           backgroundAttachment: "fixed" 
       }}>
-        <h1 className="title_2">LAHAUL & SPITI</h1>
+        <h1 className="title_2" style={{color: theme==="dark"? "purple" : "black"}}>LAHAUL & SPITI</h1>
       </div>
 
       {/* Content Section */}
-      <div className="content">
+      <div className="content" style={{backgroundColor: theme=== "dark"? "white" : "purple"}}>
         <div className="image">
          
-          <div className="content_2">
+          <div className="content_2" style={{backgroundColor: theme==="dark"? "black": "white"}}>
             <h2>LAHAUL & SPITI</h2>
             <div>
                 <p>
@@ -47,6 +51,32 @@ export const LahaulSpiti = () => {
                 <p>
                 In ancient Buddhist scriptures, Padma thangyiang and Mam-kambum there is mention of a country named Khasa or Hasha to the south of Ladakh and Zangskar. It is possible also that Garzha may be corruption of Khasa or Hasha. Between the 6th century B.C. and the 5th century A.D., the Saka and Khasa tribes, after having been driven out from Central Asia by the Huns, crossed over into India. many of these settled down in the valleys of Mid-Himalayas between Garhwal and Ladakh. This is borne out by the numerous remains of their graves found in these valleys. There is a nullah near Keylong known as Shaks, which seems to have taken its name after the Saka tribe settled in the Bhaga valley.
                 </p>
+            </div>
+
+            <div 
+            style={{ display: "flex", justifyContent: "space-evenly"}}>
+              <Link to="/lahaul">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/1205230/pexels-photo-1205230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>LAHAUL</h3>
+              </div>
+              </Link>
+              <Link to="/spiti">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/13113553/pexels-photo-13113553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>SPITI</h3>
+              </div>
+              </Link>
+              <Link to="/trekking">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/914128/pexels-photo-914128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>TREKKING</h3>
+              </div>
+              </Link>
+              
             </div>
 
 {/* image and link is remaning */}

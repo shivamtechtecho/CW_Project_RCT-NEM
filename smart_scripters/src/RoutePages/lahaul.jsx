@@ -1,12 +1,15 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import React from "react";
+import React, { useContext } from "react";
 import "./routepages.css"
+import { ThemeContext } from "../context/themeContext";
+import { Link } from "react-router-dom";
 
 export const Lahaul = () => {
+  const {theme, toggleTheme} = useContext(ThemeContext);
   return (
     
-    <div className="jammupage">
+    <div className="jammupage" style={{backgroundColor: theme==="dark"? "black": "white"}}>
         <Navbar/>
       <div style={{background: "url(https://www.ahospitalityclub.com/wp-content/uploads/2020/02/Key-Monastery-in-lahaul-spiti.jpg)", 
           backgroundRepeat: 'no-repeat',
@@ -21,14 +24,14 @@ export const Lahaul = () => {
           alignItems: "center",
           backgroundAttachment: "fixed" 
       }}>
-        <h1 className="title_2">LAHAUL</h1>
+        <h1 className="title_2" style={{color: theme==="dark"? "purple" : "black"}}>LAHAUL</h1>
       </div>
 
       {/* Content Section */}
-      <div className="content">
+      <div className="content" style={{backgroundColor: theme=== "dark"? "white" : "purple"}}>
         <div className="image">
          
-          <div className="content_2">
+          <div className="content_2" style={{backgroundColor: theme==="dark"? "black": "white"}}>
             <h2>TOURIST PLACES IN LAHAUL</h2>
             <div>
               <h3>ROHTANG</h3>
@@ -190,6 +193,30 @@ Just on the edge of the river Bhaga is a  small PWD rest house. Near this the ri
             </div>
           </div>
         </div>
+        <div 
+            style={{ display: "flex", justifyContent: "space-evenly", backgroundColor: "white"}}>
+              <Link to="/spiti">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/1555504/pexels-photo-1555504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>SPITI</h3>
+              </div>
+              </Link>
+              <Link to="/rafting">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/9065578/pexels-photo-9065578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>RAFTING</h3>
+              </div>
+              </Link>
+              <Link to="/trekking">
+              <div
+              style={{padding: "30px"}}>
+                <img src="https://images.pexels.com/photos/3604912/pexels-photo-3604912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <h3>TREKKING</h3>
+              </div>
+              </Link>
+              </div>
       </div>
       <Footer/>
     </div>
