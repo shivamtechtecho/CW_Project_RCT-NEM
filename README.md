@@ -113,13 +113,16 @@ smart_scripters
 To set up the project locally, follow these steps:
 
 ```bash
+
 # Clone the repository
 git clone https://github.com/shivamtechtecho/CW_Project_RCT-NEM.git
 
 # Navigate into the project directory
 cd smart_scripters
 
-# run npm run dev on your terminal
+#run npm run dev on your terminal
+npm run dev
+
 ```
 
 ## Usage
@@ -133,9 +136,10 @@ Currently, the app rely on the on external API'S using Firebase. Future developm
 
 ## Technology Stack
 - **HTML**: For structuring the web application.
-- **TChakra-UI**: For styling and responsive design.
+- **Chakra-UI**: For styling and responsive design.
 - **JavaScript**: For adding interactivity and dynamic behavior.
 - **React.js**: For make the application optimal.
+- **Firebase**: For authentication and data rendering.
 
 ## Problem It Solves
 Trezen simplifies the travel planning process for users, especially those who may find traditional travel websites overwhelming or confusing. By providing a user-friendly interface and combining Hindi and English, it breaks down language barriers, making travel information more accessible to a diverse audience. It eliminates the hassle of navigating multiple platforms by offering comprehensive resources for booking flights, accommodations, and activities all in one place. Additionally, Trezen addresses the challenge of personalized travel experiences by tailoring recommendations based on individual preferences, empowering users to plan their ideal trips without needing extensive travel expertise.
